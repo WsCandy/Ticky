@@ -104,7 +104,7 @@
 
 			defineModules: function() {
 
-				var modules = ['misc', 'dates', 'elements'];
+				var modules = ['misc', 'elements'];
 
 				for(var module in modules) {
 

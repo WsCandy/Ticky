@@ -1,1 +1,5 @@
-$('.ticky').ticky();
+$(document).on('ready', function() {
+    
+    $('.ticky').ticky();
+    
+});
