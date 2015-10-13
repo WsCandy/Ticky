@@ -24,7 +24,6 @@
 				}
 
 				ins = new TickyCore(self, settings);
-				ins.init();
 
 				self.data('ins', ins);
 
@@ -159,19 +158,10 @@
         
         ins.publicF = {
 		    
-            test: function() {
-
-                console.log('lala');
-
-            }
             
 		};
 
-		ins.init = function() {
-
-			setUp.init();
-
-		};
+        setUp.init();
 
 	};
 
