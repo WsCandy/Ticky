@@ -1,7 +1,7 @@
 var options = {
 
-		'assetsPath' : '/',
-		'viewsPath' : '/'
+		'assetsPath' : '',
+		'viewsPath' : ''
 
 	},
 	gulp = require('gulp'),
