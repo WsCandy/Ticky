@@ -1,0 +1,49 @@
+{
+
+    "name": "Ticky",
+    "authors": [
+   
+        "Samuel Woodbridge"
+
+    ],
+
+    "description": "jQuery Time Picker",
+    "main": "js/src/ticky.js",
+    "repository": {
+
+        "type" : "git",
+        "url" : "https://github.com/WsCandy/Ticky.git"
+
+    },
+
+    "keywords": [
+
+        "Time Picker",
+        "time",
+        "jQuery",
+        "Propeller",
+        "propcomm",
+        "propeller",
+        "propcom"
+
+    ],
+
+    "license": "Public",
+    "homepage": "https://github.com/WsCandy/Ticky.git",
+
+    "ignore" : [
+
+        "/css/",
+        "/index.html"
+
+    ],
+
+    "install" : {
+
+        "js/src/ticky.js" : "httpdocs/assets/js/lib",
+        "js/src/ticky_init.js" : "httpdocs/assets/js/src",
+        "sass/ticky.scss" : "httpdocs/assets/sass/modules"
+
+    }
+
+}

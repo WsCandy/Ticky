@@ -1,0 +1,56 @@
+// Reset
+
+* {
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	-webkit-font-smoothing: antialiased;
+
+}
+
+input {
+
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-border-radius: none;
+
+	border: 1px solid black;
+	padding: 2px 5px;
+
+	line-height: 18px;
+
+}
+
+body {
+
+	padding: 20px;
+	font-family: 'Trebuchet MS';
+
+}
+
+.field-wrap {
+
+	position: relative;
+	float: left;
+	width: 100%;
+	margin-right: 2%;
+
+}
+
+// Actual Styles
+
+$ticky_primary: #47b5b3;
+$ticky_bg: #181818;
+$ticky_font: #e5e4e4;
+$ticky_arrow: #FFF;
+$ticky_disabled_bg: #272725;
+$ticky_disabled_font: #515150;
+
+.ticky {
+    
+    
+    
+}
