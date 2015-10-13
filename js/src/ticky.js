@@ -47,9 +47,9 @@
 				} else {
 
 					if(console) {
-					
-						console.error('['+ name +' '+ version +'] - "'+ settings +'" is not a public method here\'s a nice list:');
-						return ins.publicF;
+					                        
+						console.warn('['+ name +' '+ version +'] - "'+ settings +'" is not a public method here\'s a nice list:');                        
+                        return ins.publicF;
 
 					}
 
@@ -71,12 +71,8 @@
 
 		var ins = this,
 			mod = {},
-			defaults = {
-			    
-                
-                
-			},
-		options = $.extend(defaults, settings);
+			defaults = {},
+            options = $.extend(defaults, settings);
 		
 		var setUp = {
 
@@ -104,13 +100,11 @@
 
 			defineModules: function() {
 
-				var modules = ['misc', 'elements'];
-
 				for(var module in modules) {
 
 					if(modules.hasOwnProperty(module)) {
-
-						mod[modules[module]] = new ins[modules[module]]();						
+                        
+						mod[module] = new modules[module]();						
 
 					}
 
@@ -119,7 +113,7 @@
 			},
 
 			checks: function() {
-
+                
 				if(!self.is('input[type="text"]')) {
 
 					mod.misc.report('warn', 'Please fire the plugin on an input[type="text"] element! - Shutting down... :(');
@@ -131,36 +125,46 @@
 
 			}
 
-		};
-
-		ins.publicF = {
-
+		};    
+        
+        var modules = {
             
+            misc: function() {
+            
+                this.report = function(type, message) {
 
-		};
+                    if(console) {
 
-		ins.misc = function() {
+                        console[type]('['+ name +' '+ version +'] - ' + message);
 
-			this.report = function(type, message) {
+                    }
 
-				if(console) {
+                };
+            
+            },
+  
+            elements: function() {
+    
+                this.construct = function() {
 
-					console[type]('['+ name +' '+ version +'] - ' + message);
+                    mod.misc.report('error', 'This is an init test!');
 
-				}
+                    self.attr('readonly', true);
 
-			};
+                };
+    
+            }
+            
+        };
+        
+        ins.publicF = {
+		    
+            test: function() {
 
-		};
+                console.log('lala');
 
-		ins.elements = function() {
-
-			this.construct = function() {
-
-				self.attr('readonly', true);
-
-			};
-
+            }
+            
 		};
 
 		ins.init = function() {
